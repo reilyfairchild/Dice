@@ -29,26 +29,39 @@ class Die //models one single dice cube
 	}
 	void roll()
 	{
-		rollVal = 1;
-		// (int)(Math.random()*6 + 1);
+		rollVal = 2;
+		//(int)(Math.random()*6 + 1);
 	}
 	void show()
 	{
+		int siz = 100;
+		int dot = siz/(siz * 0.1);
 		fill(255);
-		rect(myX, myY, 100, 100);
+		rect(myX, myY, sizeDie, sizeDie);
+
 		//six if statements
 		if(rollVal == 1){
 			fill(255, 0, 0);
-			ellipse(myX, myY, 15, 15);
+			//m
+			ellipse(myX, myY, dot , dot);
+
 		}else if(rollVal ==2 ){
+			fill(255, 0, 0);
+			//topright
+			ellipse(myX + myX/9 , myY + myY/9, siz/7, siz/7);
 
 		}else if(rollVal == 3){
-
+			fill(255, 0, 0);
+			//m
+			ellipse(myX, myY, dot , dot);
 		}else if(rollVal == 4){
-
+			fill(255, 0, 0);
 		}else if(rollVal == 5){
-
+			fill(255, 0, 0);
+			//m
+			ellipse(myX, myY, dot , dot);
 		}else{
+			fill(255, 0, 0);
 			//6
 		}
 	}
